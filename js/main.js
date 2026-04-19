@@ -194,6 +194,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* --- Mortgage calculator (Real Estate page) --- */
+  const calcPrice = document.getElementById('calc-price');
+  if (calcPrice) {
+    const priceEl   = document.getElementById('calc-price');
+    const downEl    = document.getElementById('calc-down');
+    const rateEl    = document.getElementById('calc-rate');
+    const termEl    = document.getElementById('calc-term');
+    const priceVal  = document.getElementById('calc-price-val');
+    const downVal   = document.getElementById('calc-down-val');
+    const rateVal   = document.getElementById('calc-rate-val');
+    const termVal   = document.getElementById('calc-term-val');
+    const monthlyEl = document.getElementById('calc-monthly');
+    const loanEl    = document.getElementById('calc-loan');
+    const downAmtEl = document.getElementById('calc-downamt');
+    const interestEl= document.getElementById('calc-interest');
+    const totalEl   = document.getElementById('calc-total');
+
+    const fmt = (n) => '$' + Math.round(n).toLocaleString('en-US');
+
+    const recalc = () => {
+      const price = +priceEl.value;
+      const downPct = +downEl.value;
+      const rate = +rateEl.value;
+      const termY = +termEl.value;
+
+      const downAmt = price * (downPct / 100);
+      const loan    = price - downAmt;
+      const r = (rate / 100) / 12;
+      const n = termY * 12;
+      const monthly = r === 0 ? loan / n : (loan * r) / (1 - Math.pow(1 + r, -n));
+      const total   = monthly * n;
+      const interest= total - loan;
+
+      priceVal.textContent = fmt(price);
+      downVal.textContent  = downPct + '%';
+      rateVal.textContent  = rate.toFixed(1) + '%';
+      termVal.textContent  = termY + ' years';
+
+      monthlyEl.textContent = fmt(monthly);
+      loanEl.textContent    = fmt(loan);
+      downAmtEl.textContent = fmt(downAmt);
+      interestEl.textContent= fmt(interest);
+      totalEl.textContent   = fmt(total);
+    };
+
+    [priceEl, downEl, rateEl, termEl].forEach(el => el.addEventListener('input', recalc));
+    recalc();
+  }
+
   /* --- Active nav link underline --- */
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(a => {

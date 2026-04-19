@@ -7,8 +7,10 @@
   <meta name="description" content="ALOG is Ghana's complete property partner — uniting world-class interior design, construction and real estate under one trusted name." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     <!-- ============ PWA / Mobile install ============ -->
   <meta name="theme-color" content="#0a1a3a" />
   <meta name="color-scheme" content="light dark" />
@@ -51,7 +53,7 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="hero-media">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80" alt="Modern luxury home exterior" />
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80" alt="Modern luxury home exterior"  fetchpriority="high" decoding="async" />
     </div>
     <div class="hero-inner reveal">
       <span class="eyebrow" style="color: var(--gold-400);">Construction · Interior · Real Estate</span>
@@ -63,7 +65,7 @@
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><div class="n">50+</div><div class="l">Projects Delivered</div></div>
-        <div class="hero-stat"><div class="n">10+ yrs</div><div class="l">Combined Experience</div></div>
+        <div class="hero-stat"><div class="n">10+ years</div><div class="l">Combined Experience</div></div>
         <div class="hero-stat"><div class="n">98%</div><div class="l">Client Satisfaction</div></div>
       </div>
     </div>
@@ -82,7 +84,7 @@
         <a class="svc-card reveal" href="construction.html">
           <div class="media">
             <span class="tag">Construction</span>
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80" alt="Construction site workers" />
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80" alt="Construction site workers"  loading="lazy" decoding="async" />
           </div>
           <div class="body">
             <h3>ALOG Construction</h3>
@@ -94,7 +96,7 @@
         <a class="svc-card reveal" href="interior.html">
           <div class="media">
             <span class="tag">Interior Design</span>
-            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80" alt="Modern living room interior design" />
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80" alt="Modern living room interior design"  loading="lazy" decoding="async" />
           </div>
           <div class="body">
             <h3>ALOG Interiors</h3>
@@ -106,7 +108,7 @@
         <a class="svc-card reveal" href="realestate.html">
           <div class="media">
             <span class="tag">Real Estate</span>
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80" alt="Modern villa exterior" />
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80" alt="Modern villa exterior"  loading="lazy" decoding="async" />
           </div>
           <div class="body">
             <h3>ALOG Realty</h3>
@@ -154,7 +156,7 @@
 
   <!-- ============ VIDEO BAND ============ -->
   <section class="video-band">
-    <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80">
+    <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80">
       <source src="https://cdn.pixabay.com/video/2022/05/11/117198-710707201_large.mp4" type="video/mp4" />
     </video>
     <div class="overlay reveal">
@@ -176,28 +178,80 @@
 
       <div class="gallery reveal">
         <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=80">
-          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Minimalist living room" />
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Minimalist living room"  loading="lazy" decoding="async" />
           <div class="cap"><h4>Modern Minimalist Living Room</h4><small>Interior · Completed Jan 2025</small></div>
         </div>
         <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Luxury villa Accra" />
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Luxury villa Accra"  loading="lazy" decoding="async" />
           <div class="cap"><h4>Luxury 4-Bed Villa</h4><small>Real Estate · Airport Hills, Accra</small></div>
         </div>
         <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80">
-          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Construction site" />
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Construction site"  loading="lazy" decoding="async" />
           <div class="cap"><h4>Residential Complex Build</h4><small>Construction · Completed 2024 · 12 units</small></div>
         </div>
         <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1400&q=80">
-          <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=800&q=80" alt="Kitchen design" />
+          <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=800&q=80" alt="Kitchen design"  loading="lazy" decoding="async" />
           <div class="cap"><h4>Chef's Kitchen Renovation</h4><small>Interior · East Legon</small></div>
         </div>
         <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1400&q=80">
-          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Office building" />
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Office building"  loading="lazy" decoding="async" />
           <div class="cap"><h4>Commercial HQ Build</h4><small>Construction · Cantonments, Accra</small></div>
         </div>
         <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=80">
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Modern house" />
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Modern house"  loading="lazy" decoding="async" />
           <div class="cap"><h4>Contemporary Family Home</h4><small>Real Estate · Trasacco Valley</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow" style="display:block; text-align:center;">What Our Clients Say</span>
+        <h2 class="section-title">Trusted by Homeowners, Developers & Businesses</h2>
+        <p class="section-sub">Real words from real clients across our three divisions.</p>
+      </div>
+
+      <div class="testimonials">
+        <div class="testimonial reveal">
+          <span class="quote-mark">"</span>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <blockquote>From the foundation to the final paint coat, ALOG's construction team delivered our 8-unit residential block three weeks ahead of schedule. The site was immaculate and the quality exceeded our expectations.</blockquote>
+          <div class="person">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Kwame Mensah" loading="lazy" decoding="async" />
+            <div>
+              <h5>Kwame Mensah</h5>
+              <small>Property Developer · East Legon</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <span class="quote-mark">"</span>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <blockquote>They completely reimagined our living room and kitchen. Every piece, colour and texture tells a story. Our home finally feels like us — elegant, warm and totally functional for two young kids.</blockquote>
+          <div class="person">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Ama Owusu" loading="lazy" decoding="async" />
+            <div>
+              <h5>Ama Owusu</h5>
+              <small>Interior Design Client · Cantonments</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <span class="quote-mark">"</span>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <blockquote>ALOG Realty found us the perfect townhouse in Airport Hills in under three weeks. The agent handled every single paperwork step — viewing, negotiation, title search. Zero stress, total professionalism.</blockquote>
+          <div class="person">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Nana Adjei" loading="lazy" decoding="async" />
+            <div>
+              <h5>Nana Adjei</h5>
+              <small>Home Buyer · Airport Hills</small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -333,6 +387,10 @@
     </div>
   </footer>
 
+  <a class="wa-float" href="https://wa.me/233241234567?text=Hi%20ALOG%2C%20I%27d%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat with ALOG on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-label">Chat with us</span>
+  </a>
   <button class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
   <script src="js/main.js"></script>
 </body>

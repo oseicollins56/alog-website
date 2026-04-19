@@ -717,6 +717,204 @@ footer ul a:hover { color: var(--gold-400); }
 .to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .to-top:hover { background: var(--gold-500); color: var(--navy-900); }
 
+/* ---------- Floating WhatsApp ---------- */
+.wa-float {
+  position: fixed;
+  left: 24px; bottom: 24px;
+  width: 56px; height: 56px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  box-shadow: 0 10px 26px rgba(37, 211, 102, .45);
+  z-index: 99;
+  font-size: 26px;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.wa-float::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, .35);
+  animation: waPulse 2.2s ease-out infinite;
+  z-index: -1;
+}
+.wa-float:hover { transform: scale(1.08); box-shadow: 0 14px 32px rgba(37, 211, 102, .6); }
+.wa-float .wa-label {
+  position: absolute;
+  right: calc(100% + 10px);
+  background: var(--navy-900);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(6px);
+  transition: all .25s var(--ease);
+  pointer-events: none;
+}
+.wa-float:hover .wa-label { opacity: 1; transform: translateX(0); }
+@keyframes waPulse {
+  0% { transform: scale(1); opacity: .7; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+@media (max-width: 640px) {
+  .wa-float { width: 52px; height: 52px; font-size: 24px; left: 16px; bottom: 16px; }
+  .wa-float .wa-label { display: none; }
+}
+
+/* ---------- Testimonials ---------- */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+@media (max-width: 900px) { .testimonials { grid-template-columns: 1fr; } }
+.testimonial {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--line);
+  position: relative;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.testimonial:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.testimonial .quote-mark {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--gold-400);
+  position: absolute;
+  top: 10px; right: 22px;
+  opacity: .35;
+}
+.testimonial .stars {
+  color: var(--gold-500);
+  margin-bottom: 14px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.testimonial blockquote {
+  margin: 0 0 22px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.testimonial .person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.testimonial .person img {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimonial .person h5 {
+  margin: 0;
+  font-size: 15px;
+  color: var(--navy-900);
+}
+.testimonial .person small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* ---------- Mortgage Calculator ---------- */
+.calc-wrap {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 36px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--line);
+  margin-top: 28px;
+}
+@media (max-width: 900px) { .calc-wrap { grid-template-columns: 1fr; padding: 26px; } }
+.calc-wrap h3 { margin-top: 0; color: var(--navy-900); }
+.calc-wrap .calc-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.calc-wrap label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy-900);
+  display: flex;
+  justify-content: space-between;
+}
+.calc-wrap label .value {
+  color: var(--gold-500);
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+}
+.calc-wrap input[type="number"] {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  background: var(--bg-alt);
+  transition: border .2s var(--ease);
+}
+.calc-wrap input[type="number"]:focus {
+  outline: none;
+  border-color: var(--gold-500);
+  background: var(--white);
+}
+.calc-wrap input[type="range"] {
+  width: 100%;
+  accent-color: var(--gold-500);
+}
+.calc-result {
+  background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+  color: var(--white);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.calc-result::before {
+  content: "";
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, var(--gold-500) 0%, transparent 70%);
+  opacity: .3;
+}
+.calc-result .eyebrow { color: var(--gold-400); }
+.calc-result .monthly {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 14px 0 6px;
+  color: var(--gold-300);
+}
+.calc-result .sub { color: rgba(255,255,255,.7); font-size: 13px; margin-bottom: 24px; }
+.calc-result .breakdown { display: grid; gap: 10px; font-size: 14px; }
+.calc-result .breakdown div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.calc-result .breakdown div:last-child { border-bottom: 0; }
+.calc-result .breakdown span:last-child { font-weight: 600; color: var(--white); }
+
 /* ---------- Lightbox ---------- */
 .lightbox {
   position: fixed;

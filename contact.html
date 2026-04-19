@@ -7,8 +7,10 @@
   <meta name="description" content="Contact ALOG Group — reach the Interior Design, Construction or Real Estate division directly. Offices in Accra, Ghana." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     <!-- ============ PWA / Mobile install ============ -->
   <meta name="theme-color" content="#0a1a3a" />
   <meta name="color-scheme" content="light dark" />
@@ -47,7 +49,7 @@
 
   <!-- PAGE HEAD -->
   <section class="page-head">
-    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80" alt="ALOG office" />
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80" alt="ALOG office"  fetchpriority="high" decoding="async" />
     <div class="container reveal">
       <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Contact</div>
       <h1>Let's Start a Conversation</h1>
@@ -213,6 +215,10 @@
     </div>
   </footer>
 
+  <a class="wa-float" href="https://wa.me/233241234567?text=Hi%20ALOG%2C%20I%27d%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat with ALOG on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-label">Chat with us</span>
+  </a>
   <button class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
   <script src="js/main.js"></script>
 </body>
