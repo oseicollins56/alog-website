@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact ALOG — Interior Design, Construction & Real Estate</title>
+  <meta name="description" content="Contact ALOG Group — reach the Interior Design, Construction or Real Estate division directly. Offices in Accra, Ghana." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">A</span> ALOG</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="interior.html">Interior Design</a></li>
+          <li><a href="construction.html">Construction</a></li>
+          <li><a href="realestate.html">Real Estate</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- PAGE HEAD -->
+  <section class="page-head">
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80" alt="ALOG office" />
+    <div class="container reveal">
+      <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Contact</div>
+      <h1>Let's Start a Conversation</h1>
+      <p>Select the division you'd like to reach, send us a message, or drop by our Ridge office. We'll respond within one business day.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT GRID -->
+  <section class="section">
+    <div class="container">
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <span class="eyebrow">Reach Us</span>
+          <h2 style="margin-bottom: .4em;">We're Here to Help.</h2>
+          <p style="margin-bottom: 24px; color: var(--muted);">Prefer a quick chat? Call us directly — all three divisions share a single front desk and we'll route you to the right specialist.</p>
+
+          <div class="item">
+            <div class="ico"><i class="fa-solid fa-location-dot"></i></div>
+            <div><h4>Head Office</h4><p>12 Independence Avenue, Ridge — Accra, Ghana</p></div>
+          </div>
+          <div class="item">
+            <div class="ico"><i class="fa-solid fa-phone"></i></div>
+            <div><h4>Phone</h4><p>+233 30 274 8800 · +233 24 123 4567</p></div>
+          </div>
+          <div class="item">
+            <div class="ico"><i class="fa-solid fa-envelope"></i></div>
+            <div><h4>Division Emails</h4><p>interiors@alog.com<br />construction@alog.com<br />realty@alog.com</p></div>
+          </div>
+          <div class="item">
+            <div class="ico"><i class="fa-regular fa-clock"></i></div>
+            <div><h4>Business Hours</h4><p>Mon – Fri · 8:00 AM – 6:00 PM<br />Saturday · 9:00 AM – 1:00 PM</p></div>
+          </div>
+          <div class="item">
+            <div class="ico"><i class="fa-brands fa-whatsapp"></i></div>
+            <div><h4>WhatsApp</h4><p>+233 24 123 4567 · Quick replies, 7 days a week</p></div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-success">
+            <i class="fa-solid fa-circle-check" style="margin-right: 6px;"></i>
+            Thanks! Your enquiry has been sent — we'll be in touch shortly.
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label>Full Name <span style="color: #c0392b;">*</span></label>
+              <input type="text" data-required placeholder="Your name" />
+              <small class="error-msg">This field is required.</small>
+            </div>
+            <div class="form-field">
+              <label>Email <span style="color: #c0392b;">*</span></label>
+              <input type="email" data-required placeholder="you@example.com" />
+              <small class="error-msg">Please enter a valid email.</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label>Phone</label>
+              <input type="tel" placeholder="+233..." />
+              <small class="error-msg"></small>
+            </div>
+            <div class="form-field">
+              <label>Division of Interest <span style="color: #c0392b;">*</span></label>
+              <select data-required>
+                <option value="">Select a division</option>
+                <option>Interior Design</option>
+                <option>Construction</option>
+                <option>Real Estate</option>
+                <option>All / Not sure yet</option>
+              </select>
+              <small class="error-msg">Please select a division.</small>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>Enquiry Type</label>
+            <select>
+              <option>General enquiry</option>
+              <option>Request a quote</option>
+              <option>Book a consultation</option>
+              <option>Schedule a property viewing</option>
+              <option>Partnership / press</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label>Message <span style="color: #c0392b;">*</span></label>
+            <textarea data-required placeholder="Tell us about your project or what you're looking for..."></textarea>
+            <small class="error-msg">This field is required.</small>
+          </div>
+
+          <button class="btn btn-primary" type="submit" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-paper-plane"></i> Send Enquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section section-alt" style="padding-top: 0;">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title">Visit Our Office</h2>
+        <p class="section-sub">We're in the heart of Ridge, walking distance from the National Theatre.</p>
+      </div>
+      <div class="reveal" style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md);">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2057%2C5.5570%2C-0.1857%2C5.5720&amp;layer=mapnik&amp;marker=5.5645%2C-0.1957"
+          style="width: 100%; height: 420px; border: 0;"
+          loading="lazy"
+          title="ALOG office location map">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="color: var(--white); margin-bottom: 14px;"><span class="brand-mark">A</span> ALOG</div>
+          <p>Your complete property partner — unifying interior design, construction and real estate under one trusted name in Ghana.</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Our Divisions</h4>
+          <ul>
+            <li><a href="interior.html">Interior Design</a></li>
+            <li><a href="construction.html">Construction</a></li>
+            <li><a href="realestate.html">Real Estate</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Get a Quote</a></li>
+            <li><a href="realestate.html">Listings</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in Touch</h4>
+          <ul>
+            <li><i class="fa-solid fa-phone" style="color:var(--gold-400); margin-right:6px;"></i> +233 30 274 8800</li>
+            <li><i class="fa-solid fa-envelope" style="color:var(--gold-400); margin-right:6px;"></i> hello@alog.com</li>
+            <li><i class="fa-solid fa-location-dot" style="color:var(--gold-400); margin-right:6px;"></i> Ridge, Accra</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ALOG Group. All rights reserved. · Privacy · Terms</div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="js/main.js"></script>
+</body>
+</html>

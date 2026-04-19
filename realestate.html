@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALOG Realty — Properties for Sale & Rent in Ghana</title>
+  <meta name="description" content="ALOG Realty: curated homes, apartments and commercial properties for sale and rent across Accra, Kumasi and beyond." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">A</span> ALOG</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="interior.html">Interior Design</a></li>
+          <li><a href="construction.html">Construction</a></li>
+          <li><a href="realestate.html">Real Estate</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- PAGE HEAD -->
+  <section class="page-head">
+    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=80" alt="Modern villa exterior" />
+    <div class="container reveal">
+      <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Real Estate</div>
+      <h1>ALOG Realty</h1>
+      <p>Curated properties for discerning buyers and tenants. Search by location, type or budget — and speak directly to the agent handling each listing.</p>
+    </div>
+  </section>
+
+  <!-- FILTER + LISTINGS -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow" style="display:block; text-align:center;">Browse Listings</span>
+        <h2 class="section-title">Find Your Next Property</h2>
+        <p class="section-sub">Use the filters below to narrow down by location, type and status.</p>
+      </div>
+
+      <!-- Filter bar -->
+      <div class="filter-bar reveal">
+        <div>
+          <label>Search</label>
+          <input id="f-search" type="text" placeholder="Location or property name..." />
+        </div>
+        <div>
+          <label>Type</label>
+          <select id="f-type">
+            <option value="">All Types</option>
+            <option value="villa">Villa</option>
+            <option value="apartment">Apartment</option>
+            <option value="townhouse">Townhouse</option>
+            <option value="commercial">Commercial</option>
+            <option value="land">Land</option>
+          </select>
+        </div>
+        <div>
+          <label>Status</label>
+          <select id="f-status">
+            <option value="">All</option>
+            <option value="sale">For Sale</option>
+            <option value="rent">For Rent</option>
+          </select>
+        </div>
+        <div>
+          <label>Bedrooms</label>
+          <select id="f-beds">
+            <option value="">Any</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4+">4+</option>
+          </select>
+        </div>
+        <button id="f-reset" class="btn btn-ghost"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+      </div>
+
+      <!-- Properties grid -->
+      <div id="properties-grid" class="properties">
+
+        <!-- 1 -->
+        <article class="prop-card reveal" data-name="Modern 3-Bedroom Villa" data-location="accra airport hills" data-type="villa" data-status="sale" data-beds="3">
+          <div class="media">
+            <span class="badge">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Modern villa Accra" />
+            <span class="price-tag">$350,000</span>
+          </div>
+          <div class="body">
+            <h3>Modern 3-Bedroom Villa</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> Airport Hills, Accra</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 3 beds</span>
+              <span><i class="fa-solid fa-bath"></i> 2 baths</span>
+              <span><i class="fa-solid fa-vector-square"></i> 2,400 sqft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="prop-card reveal" data-name="Luxury 4-Bed Family Home" data-location="accra trasacco valley" data-type="villa" data-status="sale" data-beds="4">
+          <div class="media">
+            <span class="badge">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Luxury family home" />
+            <span class="price-tag">$685,000</span>
+          </div>
+          <div class="body">
+            <h3>Luxury 4-Bed Family Home</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> Trasacco Valley, Accra</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 4 beds</span>
+              <span><i class="fa-solid fa-bath"></i> 4 baths</span>
+              <span><i class="fa-solid fa-vector-square"></i> 4,100 sqft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="prop-card reveal" data-name="Executive 2-Bed Apartment" data-location="accra cantonments" data-type="apartment" data-status="rent" data-beds="2">
+          <div class="media">
+            <span class="badge rent">For Rent</span>
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Apartment" />
+            <span class="price-tag">$2,400/mo</span>
+          </div>
+          <div class="body">
+            <h3>Executive 2-Bed Apartment</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> Cantonments, Accra</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 2 beds</span>
+              <span><i class="fa-solid fa-bath"></i> 2 baths</span>
+              <span><i class="fa-solid fa-vector-square"></i> 1,350 sqft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="prop-card reveal" data-name="Contemporary Townhouse" data-location="accra east legon" data-type="townhouse" data-status="sale" data-beds="3">
+          <div class="media">
+            <span class="badge">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Townhouse" />
+            <span class="price-tag">$295,000</span>
+          </div>
+          <div class="body">
+            <h3>Contemporary Townhouse</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> East Legon, Accra</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 3 beds</span>
+              <span><i class="fa-solid fa-bath"></i> 3 baths</span>
+              <span><i class="fa-solid fa-vector-square"></i> 2,000 sqft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="prop-card reveal" data-name="Studio City Loft" data-location="accra osu" data-type="apartment" data-status="rent" data-beds="1">
+          <div class="media">
+            <span class="badge rent">For Rent</span>
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80" alt="City loft" />
+            <span class="price-tag">$950/mo</span>
+          </div>
+          <div class="body">
+            <h3>Studio City Loft</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> Osu, Accra</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 1 bed</span>
+              <span><i class="fa-solid fa-bath"></i> 1 bath</span>
+              <span><i class="fa-solid fa-vector-square"></i> 620 sqft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="prop-card reveal" data-name="Penthouse with Ocean View" data-location="accra labadi" data-type="apartment" data-status="sale" data-beds="4">
+          <div class="media">
+            <span class="badge">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Penthouse" />
+            <span class="price-tag">$1,200,000</span>
+          </div>
+          <div class="body">
+            <h3>Penthouse with Ocean View</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> Labadi, Accra</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 4 beds</span>
+              <span><i class="fa-solid fa-bath"></i> 4 baths</span>
+              <span><i class="fa-solid fa-vector-square"></i> 3,800 sqft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="prop-card reveal" data-name="Commercial Office Suite" data-location="accra ridge" data-type="commercial" data-status="rent" data-beds="0">
+          <div class="media">
+            <span class="badge rent">For Rent</span>
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Commercial office" />
+            <span class="price-tag">$5,800/mo</span>
+          </div>
+          <div class="body">
+            <h3>Grade-A Office Suite</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> Ridge, Accra</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-briefcase"></i> 18 desks</span>
+              <span><i class="fa-solid fa-car"></i> 6 parks</span>
+              <span><i class="fa-solid fa-vector-square"></i> 2,200 sqft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="prop-card reveal" data-name="Kumasi Garden Villa" data-location="kumasi ahodwo" data-type="villa" data-status="sale" data-beds="4">
+          <div class="media">
+            <span class="badge">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Kumasi villa" />
+            <span class="price-tag">$420,000</span>
+          </div>
+          <div class="body">
+            <h3>Kumasi Garden Villa</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> Ahodwo, Kumasi</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 4 beds</span>
+              <span><i class="fa-solid fa-bath"></i> 3 baths</span>
+              <span><i class="fa-solid fa-vector-square"></i> 3,100 sqft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="prop-card reveal" data-name="Gated Estate Plot" data-location="accra east airport" data-type="land" data-status="sale" data-beds="0">
+          <div class="media">
+            <span class="badge">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Land plot" />
+            <span class="price-tag">$180,000</span>
+          </div>
+          <div class="body">
+            <h3>Prime Gated Estate Plot</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> East Airport, Accra</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-mountain"></i> Serviced</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 0.5 acre</span>
+              <span><i class="fa-solid fa-file-contract"></i> Title clear</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="prop-card reveal" data-name="Beachfront 3-Bed" data-location="cape coast" data-type="villa" data-status="sale" data-beds="3">
+          <div class="media">
+            <span class="badge">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80" alt="Beachfront home" />
+            <span class="price-tag">$520,000</span>
+          </div>
+          <div class="body">
+            <h3>Beachfront 3-Bed Escape</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> Cape Coast</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 3 beds</span>
+              <span><i class="fa-solid fa-bath"></i> 3 baths</span>
+              <span><i class="fa-solid fa-vector-square"></i> 2,600 sqft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11 -->
+        <article class="prop-card reveal" data-name="Garden Apartment 2-Bed" data-location="accra dzorwulu" data-type="apartment" data-status="rent" data-beds="2">
+          <div class="media">
+            <span class="badge rent">For Rent</span>
+            <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?auto=format&fit=crop&w=800&q=80" alt="Garden apartment" />
+            <span class="price-tag">$1,800/mo</span>
+          </div>
+          <div class="body">
+            <h3>Garden 2-Bed Apartment</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> Dzorwulu, Accra</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 2 beds</span>
+              <span><i class="fa-solid fa-bath"></i> 2 baths</span>
+              <span><i class="fa-solid fa-vector-square"></i> 1,180 sqft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12 -->
+        <article class="prop-card reveal" data-name="Retail Showroom" data-location="accra spintex" data-type="commercial" data-status="rent" data-beds="0">
+          <div class="media">
+            <span class="badge rent">For Rent</span>
+            <img src="https://images.unsplash.com/photo-1555636222-cae831e670b3?auto=format&fit=crop&w=800&q=80" alt="Retail showroom" />
+            <span class="price-tag">$3,200/mo</span>
+          </div>
+          <div class="body">
+            <h3>Retail Showroom Unit</h3>
+            <div class="loc"><i class="fa-solid fa-location-dot"></i> Spintex Road, Accra</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-shop"></i> Ground floor</span>
+              <span><i class="fa-solid fa-car"></i> Parking</span>
+              <span><i class="fa-solid fa-vector-square"></i> 1,450 sqft</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p id="props-empty" style="display:none; text-align:center; padding: 40px; color: var(--muted); font-size: 1.05rem;">
+        <i class="fa-regular fa-circle-question" style="color: var(--gold-500); margin-right: 6px;"></i>
+        No properties match your filters. Try resetting or adjusting your search.
+      </p>
+    </div>
+  </section>
+
+  <!-- AGENT CONTACT -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow" style="display:block; text-align:center;">Meet the Team</span>
+        <h2 class="section-title">Your ALOG Realty Agents</h2>
+        <p class="section-sub">Licensed professionals with deep local knowledge and honest counsel.</p>
+      </div>
+
+      <div class="services" style="margin-top: 40px;">
+        <div class="svc-card reveal">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Agent portrait" />
+          </div>
+          <div class="body">
+            <h3>Ama Owusu</h3>
+            <p style="color: var(--gold-500); font-weight: 600; margin-bottom: 6px;">Senior Sales Agent</p>
+            <p>Specialises in luxury residential sales across Accra's premier neighbourhoods.</p>
+            <p style="margin: 10px 0 0; color: var(--navy-900); font-weight: 600;"><i class="fa-solid fa-phone" style="color: var(--gold-500);"></i> +233 24 555 0101</p>
+          </div>
+        </div>
+        <div class="svc-card reveal">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Agent portrait" />
+          </div>
+          <div class="body">
+            <h3>Kwame Mensah</h3>
+            <p style="color: var(--gold-500); font-weight: 600; margin-bottom: 6px;">Commercial Lead</p>
+            <p>15+ years in commercial real estate, office leasing and investment advisory.</p>
+            <p style="margin: 10px 0 0; color: var(--navy-900); font-weight: 600;"><i class="fa-solid fa-phone" style="color: var(--gold-500);"></i> +233 24 555 0102</p>
+          </div>
+        </div>
+        <div class="svc-card reveal">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Agent portrait" />
+          </div>
+          <div class="body">
+            <h3>Akosua Boateng</h3>
+            <p style="color: var(--gold-500); font-weight: 600; margin-bottom: 6px;">Rentals Specialist</p>
+            <p>Expert in executive rentals, relocations and short-term furnished lets.</p>
+            <p style="margin: 10px 0 0; color: var(--navy-900); font-weight: 600;"><i class="fa-solid fa-phone" style="color: var(--gold-500);"></i> +233 24 555 0103</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container inner reveal">
+      <h2>Found Something You Love?</h2>
+      <p>Book a viewing or speak to the agent handling the listing — usually same-day response.</p>
+      <a class="btn btn-primary" href="contact.html"><i class="fa-solid fa-key"></i> Schedule a Viewing</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="color: var(--white); margin-bottom: 14px;"><span class="brand-mark">A</span> ALOG</div>
+          <p>Your complete property partner — unifying interior design, construction and real estate under one trusted name in Ghana.</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Our Divisions</h4>
+          <ul>
+            <li><a href="interior.html">Interior Design</a></li>
+            <li><a href="construction.html">Construction</a></li>
+            <li><a href="realestate.html">Real Estate</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Get a Quote</a></li>
+            <li><a href="realestate.html">Listings</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in Touch</h4>
+          <ul>
+            <li><i class="fa-solid fa-phone" style="color:var(--gold-400); margin-right:6px;"></i> +233 30 274 8800</li>
+            <li><i class="fa-solid fa-envelope" style="color:var(--gold-400); margin-right:6px;"></i> hello@alog.com</li>
+            <li><i class="fa-solid fa-location-dot" style="color:var(--gold-400); margin-right:6px;"></i> Ridge, Accra</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ALOG Group. All rights reserved. · Privacy · Terms</div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="js/main.js"></script>
+</body>
+</html>
