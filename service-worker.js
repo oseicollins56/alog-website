@@ -3,16 +3,10 @@
    Caches core site assets for offline / fast repeat visits
    ===================================================== */
 
-const CACHE_VERSION = 'alog-v1.0.0';
+const CACHE_VERSION = 'alog-v1.1.0';
+// Only pre-cache static shell assets. HTML pages are fetched network-first
+// so edits to .html files show up immediately on next load.
 const CORE_ASSETS = [
-  './',
-  './index.html',
-  './interior.html',
-  './construction.html',
-  './realestate.html',
-  './contact.html',
-  './css/styles.css',
-  './js/main.js',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
@@ -52,19 +46,33 @@ self.addEventListener('fetch', event => {
   const sameOrigin = url.origin === self.location.origin;
 
   if (sameOrigin) {
-    // Cache-first strategy
-    event.respondWith(
-      caches.match(req).then(cached => {
-        if (cached) return cached;
-        return fetch(req).then(resp => {
+    // Network-first for HTML/CSS/JS so edits show up immediately,
+    // cache-first for static assets (icons, favicon) for speed.
+    const isShell = /\.(html|css|js)$/.test(url.pathname) || url.pathname === '/' || url.pathname.endsWith('/');
+    if (isShell) {
+      event.respondWith(
+        fetch(req).then(resp => {
           if (resp && resp.status === 200 && resp.type === 'basic') {
             const copy = resp.clone();
             caches.open(CACHE_VERSION).then(cache => cache.put(req, copy));
           }
           return resp;
-        }).catch(() => caches.match('./index.html'));
-      })
-    );
+        }).catch(() => caches.match(req).then(c => c || caches.match('./index.html')))
+      );
+    } else {
+      event.respondWith(
+        caches.match(req).then(cached => {
+          if (cached) return cached;
+          return fetch(req).then(resp => {
+            if (resp && resp.status === 200 && resp.type === 'basic') {
+              const copy = resp.clone();
+              caches.open(CACHE_VERSION).then(cache => cache.put(req, copy));
+            }
+            return resp;
+          });
+        })
+      );
+    }
   } else {
     // Network-first with cache fallback for hosted assets (images, fonts, CDNs)
     event.respondWith(
