@@ -1,0 +1,65 @@
+{
+  "name": "ALOG — Your Complete Property Partner",
+  "short_name": "ALOG",
+  "description": "Interior design, construction and real estate — one brand, three expert divisions, serving Ghana.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a1a3a",
+  "theme_color": "#0a1a3a",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["business", "lifestyle", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Construction",
+      "short_name": "Build",
+      "description": "Construction services and projects",
+      "url": "./construction.html",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Interior Design",
+      "short_name": "Design",
+      "description": "Interior design portfolio and services",
+      "url": "./interior.html",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Real Estate",
+      "short_name": "Properties",
+      "description": "Browse properties for sale and rent",
+      "url": "./realestate.html",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Contact the ALOG team",
+      "url": "./contact.html",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
+}

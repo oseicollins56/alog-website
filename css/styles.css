@@ -28,7 +28,11 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
 body {
   margin: 0;
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -36,6 +40,20 @@ body {
   background: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  /* Safe-area insets for iPhone notches & Android gesture bars */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  overscroll-behavior-y: none;
+}
+/* Respect safe-area on sticky nav too */
+.nav { padding-top: env(safe-area-inset-top); }
+/* Standalone / installed PWA — slightly tighten top spacing */
+@media (display-mode: standalone) {
+  .nav { background: rgba(255,255,255,.96); }
+}
+/* Make tap targets comfortably large on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .btn, .nav-links a, .hamburger, .svc-card, .prop-card, .to-top { min-height: 44px; }
+  input, select, textarea { font-size: 16px; } /* prevents iOS auto-zoom on focus */
 }
 
 img, video { max-width: 100%; display: block; }

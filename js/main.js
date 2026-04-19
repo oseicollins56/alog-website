@@ -203,4 +203,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* --- iOS Safari: auto-fix 100vh (mobile address-bar shrink) --- */
+  const setVH = () => {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+  };
+  setVH();
+  window.addEventListener('resize', setVH);
+  window.addEventListener('orientationchange', setVH);
+
+  /* --- "Add to Home Screen" install prompt (Android / Chrome) --- */
+  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredPrompt = e;
+    // Show a subtle install button if you want to surface it; for now we just
+    // let the browser's own UI handle it.
+  });
+  window.addEventListener('appinstalled', () => {
+    deferredPrompt = null;
+    console.log('[ALOG] Installed to home screen');
+  });
+
 });
+
+/* --- Service worker registration (outside DOMContentLoaded for early load) --- */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js').then(reg => {
+      console.log('[ALOG] Service worker registered:', reg.scope);
+    }).catch(err => {
+      console.warn('[ALOG] Service worker registration failed:', err);
+    });
+  });
+}
