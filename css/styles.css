@@ -766,67 +766,6 @@ footer ul a:hover { color: var(--gold-400); }
   .wa-float .wa-label { display: none; }
 }
 
-/* ---------- Testimonials ---------- */
-.testimonials {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  margin-top: 40px;
-}
-@media (max-width: 900px) { .testimonials { grid-template-columns: 1fr; } }
-.testimonial {
-  background: var(--white);
-  border-radius: var(--radius-md);
-  padding: 32px 28px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--line);
-  position: relative;
-  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
-}
-.testimonial:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.testimonial .quote-mark {
-  font-family: "Playfair Display", serif;
-  font-size: 64px;
-  line-height: 1;
-  color: var(--gold-400);
-  position: absolute;
-  top: 10px; right: 22px;
-  opacity: .35;
-}
-.testimonial .stars {
-  color: var(--gold-500);
-  margin-bottom: 14px;
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-.testimonial blockquote {
-  margin: 0 0 22px;
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--ink);
-}
-.testimonial .person {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-top: 1px solid var(--line);
-  padding-top: 18px;
-}
-.testimonial .person img {
-  width: 48px; height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.testimonial .person h5 {
-  margin: 0;
-  font-size: 15px;
-  color: var(--navy-900);
-}
-.testimonial .person small {
-  color: var(--muted);
-  font-size: 12px;
-}
-
 /* ---------- Mortgage Calculator ---------- */
 .calc-wrap {
   display: grid;
